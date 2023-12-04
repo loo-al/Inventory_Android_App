@@ -68,7 +68,7 @@ fun ItemDetailsScreen(
                 canNavigateBack = true,
                 navigateUp = navigateBack
             )
-        }, floatingActionButton = {
+        /*}, floatingActionButton = {
             FloatingActionButton(
                 onClick = { navigateToEditItem(uiState.value.itemDetails.id) },
                 shape = MaterialTheme.shapes.medium,
@@ -79,7 +79,7 @@ fun ItemDetailsScreen(
                     imageVector = Icons.Default.Edit,
                     contentDescription = stringResource(R.string.edit_item_title),
                 )
-            }
+            }*/
         }, modifier = modifier
     ) { innerPadding ->
         ItemDetailsBody(
@@ -117,14 +117,14 @@ private fun ItemDetailsBody(
         ItemDetails(
             item = itemDetailsUiState.itemDetails.toItem(), modifier = Modifier.fillMaxWidth()
         )
-        Button(
-            onClick = onSellItem,
-            modifier = Modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.small,
-            enabled = !itemDetailsUiState.outOfStock
-        ) {
-            Text(stringResource(R.string.sell))
-        }
+//        Button(
+//            onClick = onSellItem,
+//            modifier = Modifier.fillMaxWidth(),
+//            shape = MaterialTheme.shapes.small,
+//            enabled = !itemDetailsUiState.outOfStock
+//        ) {
+//            Text(stringResource(R.string.sell))
+//        }
         OutlinedButton(
             onClick = { deleteConfirmationRequired = true },
             shape = MaterialTheme.shapes.small,
@@ -185,6 +185,17 @@ fun ItemDetails(
             ItemDetailsRow(
                 labelResID = R.string.price,
                 itemDetail = item.formatedPrice(),
+                modifier = Modifier.padding(
+                    horizontal = dimensionResource(
+                        id = R.dimen
+                            .padding_medium
+                    )
+                )
+            )
+            //delete this
+            ItemDetailsRow(
+                labelResID = R.string.cost,
+                itemDetail = item.formatedCost(),
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen

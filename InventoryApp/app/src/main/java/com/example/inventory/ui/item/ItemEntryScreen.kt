@@ -171,7 +171,7 @@ private fun ItemEntryScreenPreview() {
     InventoryTheme {
         ItemEntryBody(itemUiState = ItemUiState(
             ItemDetails(
-                name = "Item name", price = "10.00", quantity = "5"
+                name = "Item name", price = "10.00", quantity = "5", cost = "50.00"
             )
         ), onItemValueChange = {}, onSaveClick = {})
     }

@@ -57,6 +57,7 @@ data class ItemDetails(
     val name: String = "",
     val price: String = "",
     val quantity: String = "",
+    val cost: String = ""
 )
 
 /**
@@ -68,13 +69,16 @@ fun ItemDetails.toItem(): Item = Item(
     id = id,
     name = name,
     price = price.toDoubleOrNull() ?: 0.0,
-    quantity = quantity.toIntOrNull() ?: 0
+    quantity = quantity.toIntOrNull() ?: 0,
+    cost = (cost).toDoubleOrNull() ?: 0.0
 )
 
 fun Item.formatedPrice(): String {
     return NumberFormat.getCurrencyInstance().format(price)
 }
-
+fun Item.formatedCost(): String {
+    return NumberFormat.getCurrencyInstance().format(cost)
+}
 /**
  * Extension function to convert [Item] to [ItemUiState]
  */
@@ -90,5 +94,6 @@ fun Item.toItemDetails(): ItemDetails = ItemDetails(
     id = id,
     name = name,
     price = price.toString(),
-    quantity = quantity.toString()
+    quantity = quantity.toString(),
+    cost = (price*quantity).toString()
 )
