@@ -12,6 +12,7 @@
     <string name="item_entry_title">Add Item</string>
     <string name="item_final_title">Order Details</string>
     <string name="item_name_req">Item Name*</string>
+    <string name="item_order_title">Order Items</string>
     <string name="item_price_req">Item Price*</string>
     <string name="no">No</string>
     <string name="price">Price</string>
