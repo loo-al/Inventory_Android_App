@@ -9,4 +9,5 @@ Inventory tracking mobile application.  Add, update, sell, or delete item(s) fro
 4. Load files or copy and paste source code
 5. Compile / build the project
 6. Set up an Android emulator
-7. Run app on the emulator 
+7. Load the emulator in the device selector
+8. Run
