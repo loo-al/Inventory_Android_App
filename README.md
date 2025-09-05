@@ -1,5 +1,7 @@
 # Inventory Android App 📱
 
+**December 2023**
+
 Inventory tracking mobile application.  Add, update, sell, or delete item(s) from a local room database.
 
 ### 💻 To try the app 
