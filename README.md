@@ -1,6 +1,6 @@
 # 💻 Inventory Android App
 
-Inventory tracking mobile application.  Add, update, sell, or delete item(s) from local room database.
+Inventory tracking mobile application.  Add, update, sell, or delete item(s) from a local room database.
 
 1. Download / clone source code
 2. Open Android Studios 
